@@ -1,0 +1,32 @@
+li{
+    list-style: none;
+}
+.footer {
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+.footer__navLinks{
+    padding: 0;
+    margin: 0;
+}
+  
+.footer__navLink {
+    margin-right: 15px;
+  }
+  
+.footer__navLink a {
+    position: relative;
+    text-transform: uppercase;
+    font-family: StdMedium;
+    color: #97979c;
+    font-size: 14px;
+  }
+  
+.footer__navVolume {
+    float: right;
+    margin-right: 50px;
+    font-size: 27px;
+    color: #97979c;
+    margin-bottom: 30px;
+  }

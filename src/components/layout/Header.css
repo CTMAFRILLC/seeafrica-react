@@ -1,0 +1,21 @@
+.header{
+    position: relative;
+    padding: 1rem 0;   
+}
+.header__btn {
+    background-color: #7cfcc9;
+    border: none;
+    padding: 10px 25px;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #212121;
+    font-family: StdBlack;
+    font-weight: 600;
+    outline: none;
+}
+
+.header__logo {
+    width: 60px;
+    height: 60px;
+  }

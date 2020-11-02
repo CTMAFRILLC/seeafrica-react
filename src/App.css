@@ -1,39 +1,58 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: StdBlack;
+  src: url("assets/fonts/CircularStdBlack.ttf")
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: StdBold;
+  src: url("assets/fonts/CircularStdBold.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+@font-face {
+  font-family: StdBook;
+  src: url("assets/fonts/CircularStdBook.ttf");
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@font-face {
+  font-family: StdMedium;
+  src: url("assets/fonts/CircularStdMedium.ttf");
+}
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+
+body {
+  background-color: #212121;
+  color: #eeeeee;
+  font-family: "Nunito", sans-serif;
+
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px !important;
+  background: #34FFC8;
+}
+
+::-webkit-scrollbar-track {
+  background: #212121;
+}
+
+
+#__react-alert__ div div div{
+  background: #fe4c50 !important;
+  
+  width: unset !important;
+}
+
+#__react-alert div div div span{
+  font-size: 15px;
+    text-transform: capitalize;
+    font-family: StdBold;
+    color: #fff;
 }
