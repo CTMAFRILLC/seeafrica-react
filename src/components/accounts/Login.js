@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Auth from './Auth';
-
+import Placholder from '../../assets/icons/png/Circle Button.png'
+import FormImage from '../../assets/icons/png/image.png'
 import { Link, Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -37,7 +38,7 @@ class Login extends Component {
                 <div className="col-md-6 col__left">
                     <div className="mb-4">
                         <h3 className="txt1">Sign In</h3>
-                        <h4 className="txt2"> New User? <a to={"/sign-up"} className="txt3"> Create an Account</a></h4>
+                        <h4 className="txt2"> New User? <Link to={"/signup"} className="txt3"> Create an Account</Link></h4>
                     </div>
                     <form onSubmit={this.onSubmit}>
                         <div>
@@ -75,6 +76,12 @@ class Login extends Component {
                             </div>
                         </div>
                     </form>
+                </div>
+                <div className="col-md-6 col__right">
+                    <Link to={"/"} className="icon__close">
+                        <img src={Placholder} alt="" />
+                    </Link>
+                    <img src={FormImage} className="form__image" alt=""/>
                 </div>
             </Auth>
         )

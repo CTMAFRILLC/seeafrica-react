@@ -15,6 +15,8 @@ li{
     margin-right: 15px;
   }
   
+
+.header__navLink a,
 .footer__navLink a {
     position: relative;
     text-transform: uppercase;
@@ -24,9 +26,9 @@ li{
   }
   
 .footer__navVolume {
-    float: right;
+    /* float: right;
     margin-right: 50px;
     font-size: 27px;
     color: #97979c;
-    margin-bottom: 30px;
+    margin-bottom: 30px; */
   }

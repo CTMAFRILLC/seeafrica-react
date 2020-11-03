@@ -49,7 +49,7 @@ class Signup extends Component {
                 <div className="col-md-6 col__left">
                     <div className="mb-2">
                         <h3 className="txt1">Create an Account</h3>
-                        <h4 className="txt2"> Already A User? <Link to={"/login"} className="SA-txt3"> Sign in</Link></h4>
+                        <h4 className="txt2"> Already A User? <Link to={"/login"} className="txt3"> Sign in</Link></h4>
                     </div>
 
                     <form onSubmit={this.onSubmit}>

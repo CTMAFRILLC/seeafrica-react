@@ -1,0 +1,80 @@
+.wrapper__container {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 160px);
+}
+
+.aside__dashboard li {
+    position: relative;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  .aside__dashboard li.active::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #34FFC8;
+  }
+  
+  .aside__dashboard li a {
+    position: relative;
+    display: block;
+    font-family: StdBold;
+    color: #F2F3F7;
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 2.5px 25px;
+  }
+  
+  .aside__dashboard li.active a {
+    color: #34FFC8;
+  }
+
+
+  .dashboard__main .sa-toursite-desc {
+    margin-top: 1rem;
+  }
+  .dashboard__main .sa-preview-carousel .flickity-prev-next-button.next{
+    right: 0;
+  }
+  .dashboard__main .flickity-prev-next-button{
+    width: 35px;
+    height: 30px;
+    top: 35%;
+    transform: translateY(-35%);
+    /* height: 35px; */
+  }
+  .dashboard__main .sa-preview-carousel{
+    padding-right: 35px;
+  }
+  .dashboard__main .sa-toursite-desc .sa-preview-carousel .flickity-viewport{
+    height: 360px !important;
+  }
+  .dashboard__main .sa-explore-courousel-details p{
+    font: 14px StdBook;
+  }
+  
+
+  .dashboard__title h1 {
+    position: relative;
+    font-family: StdBlack;
+    color: #EEEEEE;
+    font-size: 40px;
+  }
+  
+  .dashboad__preview p,
+  .dashboard__title p {
+    position: relative;
+    font-family: StdBlack;
+    color: #EEEEEE;
+    font-size: 18px;
+  }
+
+  .dashboad__preview .sa-preview-carousel .flickity-button.flickity-prev-next-button.previous {
+    display: none;
+  }
