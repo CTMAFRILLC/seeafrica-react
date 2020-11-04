@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 
 import { register } from '../../actions/auth';
 import { createMessage } from '../../actions/messages';
+import SocialBtn from './SocialBtn';
 
 class Signup extends Component {
     state = {
@@ -77,10 +78,7 @@ class Signup extends Component {
                                 <span>Or sign in with</span>
                                 <span className="form__questDash" />
                             </div>
-                            <div className="my-2 d-flex justify-content-between">
-                                <a href="#" className="btn df__btn">Google</a>
-                                <a href="#" className="btn df__btn">Facebook</a>
-                            </div>
+                            <SocialBtn />
                         </div>
 
                         
