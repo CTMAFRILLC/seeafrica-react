@@ -21,6 +21,7 @@
     background-color: #34FFC8;
   }
   
+  .aside__dashboard li button,
   .aside__dashboard li a {
     position: relative;
     display: block;
@@ -36,7 +37,7 @@
   }
 
 
-  .dashboard__main .sa-toursite-desc {
+  .dashboard__main .toursite__desc {
     margin-top: 1rem;
   }
   .dashboard__main .sa-preview-carousel .flickity-prev-next-button.next{
@@ -52,7 +53,7 @@
   .dashboard__main .sa-preview-carousel{
     padding-right: 35px;
   }
-  .dashboard__main .sa-toursite-desc .sa-preview-carousel .flickity-viewport{
+  .dashboard__main .toursite__desc .sa-preview-carousel .flickity-viewport{
     height: 360px !important;
   }
   .dashboard__main .sa-explore-courousel-details p{
@@ -78,3 +79,138 @@
   .dashboad__preview .sa-preview-carousel .flickity-button.flickity-prev-next-button.previous {
     display: none;
   }
+
+
+
+  .toursite__desc .tabcontent {
+    display: none;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .toursite__desc .tabcontent:first-child {
+    display: block;
+  }
+  
+  .toursite__desc {
+    position: relative;
+    margin-top: 2rem;
+    /* padding-left: 8rem; */
+  }
+  
+  .toursite__desc .sa-preview-carousel .carousel-cell {
+    height: 200px !important;
+  }
+  
+  .toursite__desc .sa-preview-carousel .flickity-viewport {
+    height: 200px !important;
+  }
+  
+  .toursite__desc .sa-preview-carousel .carousel-cell.is-selected {
+    height: 200px !important;
+  }
+  
+  .sa-explore .toursite__desc {
+    margin-top: 1rem;
+  }
+  
+  .sa-explore .toursite__desc .sa-preview-carousel .flickity-viewport {
+    height: 370px !important;
+  }
+  
+  .sa-explore .toursite__desc .sa-preview-carousel .carousel-cell.is-selected {
+    height: unset !important;
+  }
+  
+  
+  .sa-dashboard-main .sa-preview-carousel .carousel-cell ,
+  .sa-explore .sa-preview-carousel .carousel-cell {
+    top: 0 !important;
+    background-color: transparent !important;
+    overflow: unset;
+    box-shadow: unset;
+  }
+  .sa-dashboard-main .toursite__desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer{
+    height: 250px !important;
+    overflow: hidden;
+  }
+  
+  .sa-explore .toursite__desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer {
+    height: 300px !important;
+    overflow: hidden;
+  }
+  .sa-dashboard-main .toursite__desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer img{
+    min-height: 250px !important;
+  }
+  .sa-explore .toursite__desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer img {
+    min-height: 300px !important;
+  }
+  
+  .sa-explore-courousel-details {
+    position: relative;
+    padding: 10px 5px;
+    color: #eee !important;
+  }
+  
+  .sa-explore-courousel-details h4 {
+    font-size: 20px;
+    font-family: StdBlack;
+    margin: 0;
+  }
+  
+  .sa-explore-courousel-details p {
+    font-size: 14px;
+    font-family: StdBook;
+  }
+  
+  
+  .toursite__desc .sa-preview-carousel .carousel-cell.is-selected .sa-carousel-imgContainer {
+    height: 200px;
+  }
+  
+  .toursite__desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer {
+    height: 200px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .toursite__desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer img {
+    min-height: 200px;
+  }
+
+
+
+  .dashboard__inputfield {
+    position: relative;
+    padding: 1rem 0;
+    font-family: StdBook;
+    border: none;
+    margin: auto 5px;
+    border-bottom: 1px solid #3a3939;
+  }
+  
+  .dashboard__inputfield p {
+    color: #EEEEEE;
+    font-size: 16px;
+    text-transform: unset;
+    font-family: StdMedium;
+  }
+  
+  .dashboard__inputfield input {
+    width: 100%;
+    background-color: transparent;
+    font-family: StdBook;
+    color: #F2F3F7;
+    border: none;
+    outline: none;
+    font-size: 18px;
+  }
+  
+  .sa-dashboard-card a,
+  .dashboard__inputfield a {
+    color: #34FFC8;
+    font-family: StdBook;
+  }
+  

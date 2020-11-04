@@ -14,7 +14,6 @@ import {
 
 // CHECK TOKEN & LOAD USER
 export const loadUser = () => (dispatch, getState) => {
-  console.log("userToken", tokenConfig(getState))
   // User Loading
   dispatch({ type: USER_LOADING });
 
@@ -49,7 +48,6 @@ export const login = (username, password) => (dispatch) => {
   axios
     .post('https://ctmafri.herokuapp.com/api/auth/login/', body, config)
     .then((res) => {
-      console.log(res.data)
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data,
@@ -63,6 +61,52 @@ export const login = (username, password) => (dispatch) => {
     });
 };
 
+
+// fACEBOOK lOGIN 
+export const fbLogin = (accesstoken) => (dispatch) => {
+  axios.post(
+    "https://ctmafri.herokuapp.com/api/auth/facebook/",
+    {
+      access_token: accesstoken,
+    }
+  ).then((res) => {
+    console.log("testdy", res.data)
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: res.data,
+    });
+  })
+  .catch((err) => {
+    dispatch(returnErrors(err.response.data, err.response.status));
+    dispatch({
+      type: LOGIN_FAIL,
+    });
+  });
+};
+
+// GOOGLE lOGIN 
+export const googleLogin = (accesstoken) => (dispatch) => {
+  axios.post(
+    "https://ctmafri.herokuapp.com/api/auth/google/",
+    {
+      access_token: accesstoken,
+    }
+  ).then((res) => {
+    console.log("tesgoogletdy", res.data)
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: res.data,
+    });
+  })
+  .catch((err) => {
+    dispatch(returnErrors(err.response.data, err.response.status));
+    dispatch({
+      type: LOGIN_FAIL,
+    });
+  });
+};
+
+
 // REGISTER USER
 export const register = ({ username, email, password1, password2 }) => (dispatch) => {
   // Headers
@@ -74,13 +118,11 @@ export const register = ({ username, email, password1, password2 }) => (dispatch
 
   // Request Body
   const body = JSON.stringify({ username, email, password1, password2, });
-  console.log(body)
 
   axios
     .post('https://ctmafri.herokuapp.com/api/auth/registration/', body, config)
     .then((res) => {
       const registerMsg = res.data.detail;
-      console.log("data", registerMsg)
       dispatch(createMessage({ register: registerMsg }));
       dispatch({
         type: REGISTER_SUCCESS,
@@ -127,6 +169,5 @@ export const tokenConfig = (getState) => {
   if (token) {
     config.headers['Authorization'] = `Token ${token}`;
   }
-
   return config;
 };

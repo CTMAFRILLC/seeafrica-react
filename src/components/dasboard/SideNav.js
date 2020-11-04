@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
-export default class SideNav extends Component {
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../../actions/auth';
+import SigoutSvg from '../../assets/icons/svg/signout.svg'
+class SideNav extends Component {
+    static propTypes = {
+        auth: PropTypes.object.isRequired,
+        logout: PropTypes.func.isRequired,
+    }
     render() {
         const {active} = this.props
         return (
@@ -16,10 +23,19 @@ export default class SideNav extends Component {
                             <div className="py-5" />
                             <div className="py-5" />
                         </div>
-                        signout
+                        <li>
+                            <button className="btn" onClick={this.props.logout}><img src={SigoutSvg} /> sign out</button>
+                        </li>
                     </ul>
                 </nav>
             </aside>
         )
     }
 }
+
+
+const mapStateToProps = (state) => ({
+    auth: state.auth,
+  });
+  
+export default connect(mapStateToProps, { logout })(SideNav);

@@ -5,8 +5,12 @@ import FormImage from '../../assets/icons/png/image.png'
 import { Link, Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { login } from '../../actions/auth';
+import { login, fbLogin, googleLogin } from '../../actions/auth';
 
+
+
+import FacebookLogin from "react-facebook-login";
+import GoogleLogin from "react-google-login";
 
 class Login extends Component {
     state = {
@@ -17,6 +21,8 @@ class Login extends Component {
       
     static propTypes = {
         login: PropTypes.func.isRequired,
+        fbLogin: PropTypes.func.isRequired,
+        googleLogin: PropTypes.func.isRequired,
         isAuthenticated: PropTypes.bool,
       
     }
@@ -27,12 +33,23 @@ class Login extends Component {
     }
     
     onChange = (e) => this.setState({ [e.target.name] : e.target.value});
+
+    responseFacebook = async (response) => {
+        this.props.fbLogin(response.accessToken);
+    };
+
+    responseGoogle = (response) => {
+        this.props.googleLogin(response.accessToken);
+    };
     
     render() {
+
         if (this.props.isAuthenticated){
             return <Redirect to="/dashboard" />;
         }
         const { username, password } = this.state;
+
+
         return (
             <Auth>
                 <div className="col-md-6 col__left">
@@ -71,8 +88,25 @@ class Login extends Component {
                                 <span className="form__questDash" />
                             </div>
                             <div className="my-2 d-flex justify-content-between">
-                                <a href="#" className="btn df__btn">Google</a>
-                                <a href="#" className="btn df__btn">Facebook</a>
+                                {/* <a href="#" className="btn df__btn">Google</a>
+                                <a href="#" className="btn df__btn">Facebook</a> */}
+
+
+                                <FacebookLogin 
+                                    appId = "1041512509617176"
+                                    fields = "name,email,picture"
+                                    callback = {this.responseFacebook }
+                                    cssClass="btn df__btn"
+                                    textButton="Facebook"
+                                 />
+                                <GoogleLogin 
+                                    clientId = "544513198345-82jojq661i8drp80kmekocbmhc9i0tfk.apps.googleusercontent.com"
+                                    onSuccess = {this.responseGoogle}
+                                    onFailure = {this.responseGoogle}
+                                    buttonText = "Google"
+                                    icon={false}
+                                    className="btn df__btn"
+                                />
                             </div>
                         </div>
                     </form>
@@ -92,4 +126,4 @@ const mapStateToProps = (state) => ({
     isAuthenticated: state.auth.isAuthenticated,
 });
   
-export default connect(mapStateToProps, { login })(Login)
+export default connect(mapStateToProps, { login, fbLogin, googleLogin })(Login)

@@ -940,7 +940,7 @@ a.sa-desc-tablinks.active::after {
   background: #34ffc8;
 }
 
-.sa-toursite-desc .tabcontent {
+/* .sa-toursite-desc .tabcontent {
   display: none;
   position: relative;
   transition: 0.5s;
@@ -955,6 +955,7 @@ a.sa-desc-tablinks.active::after {
   margin-top: 2rem;
   /* padding-left: 8rem; */
 }
+/*
 
 .sa-toursite-desc .sa-preview-carousel .carousel-cell {
   height: 200px !important;
@@ -979,7 +980,7 @@ a.sa-desc-tablinks.active::after {
 .sa-explore .sa-toursite-desc .sa-preview-carousel .carousel-cell.is-selected {
   height: unset !important;
 }
-
+*/
 
 .sa-dashboard-main .sa-preview-carousel .carousel-cell ,
 .sa-explore .sa-preview-carousel .carousel-cell {
@@ -988,6 +989,7 @@ a.sa-desc-tablinks.active::after {
   overflow: unset;
   box-shadow: unset;
 }
+/*
 .sa-dashboard-main .sa-toursite-desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer{
   height: 250px !important;
   overflow: hidden;
@@ -1003,6 +1005,7 @@ a.sa-desc-tablinks.active::after {
 .sa-explore .sa-toursite-desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer img {
   min-height: 300px !important;
 }
+*/
 
 .sa-explore-courousel-details {
   position: relative;
@@ -1020,7 +1023,7 @@ a.sa-desc-tablinks.active::after {
   font-size: 14px;
   font-family: StdBook;
 }
-
+/*
 
 .sa-toursite-desc .sa-preview-carousel .carousel-cell.is-selected .sa-carousel-imgContainer {
   height: 200px;
@@ -1036,7 +1039,7 @@ a.sa-desc-tablinks.active::after {
 
 .sa-toursite-desc .sa-preview-carousel .carousel-cell .sa-carousel-imgContainer img {
   min-height: 200px;
-}
+} */
 
 .sa-preview-carousel .carousel-cell {
   position: relative;
@@ -1265,7 +1268,7 @@ a.sa-desc-tablinks.active::after {
 .sa-dashboard-main .sa-explore-courousel-details p{
   font: 14px StdBook;
 }
-
+/* 
 .sa-dashboard-inputfield {
   position: relative;
   padding: 1rem 0;
@@ -1295,7 +1298,7 @@ a.sa-desc-tablinks.active::after {
 .sa-dashboard-inputfield a {
   color: #34FFC8;
   font-family: StdBook;
-}
+} */
 
 .sa-payment-card {
   position: relative;
