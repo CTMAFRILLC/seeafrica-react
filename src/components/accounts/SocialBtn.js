@@ -13,28 +13,30 @@ class SocialBtn extends Component {
       
     }
     responseFacebook = async (response) => {
-        this.props.fbLogin(response.accessToken);
+        let facebookResponse = await this.props.fbLogin(response.accessToken);
+        console.log('facebookResponse', facebookResponse);
+        console.log('Respose', response);
+    };
+    
+    responseGoogle = async (response) => {
+        let googleResponse = await this.props.googleLogin(response.accessToken);
+        console.log('googleResponse', googleResponse);
+        console.log('Respose', response);
     };
 
     render() {
 
-        const responseGoogle = async (response) => {
-            let googleResponse = await googleLogin(response.accessToken);
-            console.log(googleResponse);
-            console.log(response);
-          };
-
         return (
             <div className="my-2 d-flex justify-content-between">
-                {/* <GoogleLogin 
+                <GoogleLogin 
                     clientId = "544513198345-82jojq661i8drp80kmekocbmhc9i0tfk.apps.googleusercontent.com"
-                    onSuccess = {responseGoogle}
-                    onFailure = {responseGoogle}
+                    onSuccess = {this.responseGoogle}
+                    onFailure = {this.responseGoogle}
                     buttonText = "Google"
                     icon={false}
                     className="btn df__btn"
                     cssClass="btn df__btn"
-                /> */}
+                />
                 <ReactFacebookLogin 
                     appId = "1041512509617176"
                     fields = "name,email,picture"
@@ -47,4 +49,4 @@ class SocialBtn extends Component {
     }
 }
 
-export default connect(null, { fbLogin })(SocialBtn)
+export default connect(null, { fbLogin, googleLogin })(SocialBtn)
